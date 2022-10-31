@@ -13,7 +13,7 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
 # Logging
 logging.basicConfig()
-logging.root.setLevel(logging.DEBUG)
+# logging.root.setLevel(logging.DEBUG)
 
 def main(args=sys.argv):
     # Load settings
@@ -73,7 +73,8 @@ def main(args=sys.argv):
     if not os.path.exists('Output'):
         os.makedirs('Output')
     
-    p = os.path.join('./Output/' + filename.split('.')[0] + settings.model_path.split('/')[-1].split('.')[0] + '_output.txt')
+    gen_names_filename = filename.split('.')[0] + settings.model_path.split('/')[-1].split('.')[0] + '_output.txt'
+    p = os.path.realpath(f'./Output/{gen_names_filename}')
     with open(p, "w+") as output_file:
         for name in generated:
             output_file.write(f"{name}\n")
