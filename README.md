@@ -1,5 +1,6 @@
 # fantasy_name_generator
-AI trained fantasy name generator
+Machine learned fantasy name generator,
+based on this [pokemon-name-generator](https://github.com/simon-larsson/pokemon-name-generator/blob/master/name_generator.ipynb) by simon-larsson.
 
 ## Install
 This project uses `poetry` to install and maintain python libraries.
